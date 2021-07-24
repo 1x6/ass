@@ -70,13 +70,7 @@ app.use((req, res, next) => (req.url.includes('favicon.ico') ? res.sendStatus(CO
 
 // Index can be overridden by a frontend
 app.get('/', (req, res, next) =>
-	(ASS_PREMIUM.enabled && ASS_PREMIUM.index)
-		? ASS_PREMIUM.index(req, res, next)
-		: fs.readFile(path('README.md'))
-			.then((bytes) => bytes.toString())
-			.then(marked)
-			.then((d) => res.render('index', { data: d }))
-			.catch(next));
+	res.sendFile(path.join(__dirname+'/index.html'));
 
 // Upload router
 app.use('/', ROUTERS.upload);
