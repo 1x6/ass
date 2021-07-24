@@ -127,7 +127,7 @@ You may also install ass using [docker-compose](https://docs.docker.com/compose/
 
 ### Install using docker-compose
 
-1. Clone the ass repo using `git clone https://github.com/tycrek/ass.git && cd ass/`
+1. Clone the ass repo using `git clone https://github.com/1x6/ass.git && cd ass/`
 2. Run the command that corresponds to your OS:
    - **Linux**: `./install/docker-linux.sh` (uses `#!/bin/bash`)
    - **Windows**: `install/docker-windows.bat` (from Command Prompt)
