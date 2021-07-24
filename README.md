@@ -106,7 +106,7 @@ ass was designed with developers in mind. If you are a developer & want somethin
 ## Installation
 
 1. You should have **Node.js 14 or later** & **npm 7 or later** installed. 
-2. Clone this repo using `git clone https://github.com/tycrek/ass.git && cd ass/`
+2. Clone this repo using `git clone https://github.com/1x6/ass.git && cd ass/`
 3. Run `npm i` to install the required dependencies
 4. Run `npm run setup` to start the easy configuration
 5. Run `npm start` to start the server. The first time you run it you will be shown your first authorization token; save this as you will need it to configure ShareX.
