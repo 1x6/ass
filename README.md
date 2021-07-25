@@ -104,6 +104,12 @@ ass was designed with developers in mind. If you are a developer & want somethin
 [Gfycat]: https://gfycat.com
 
 ## Installation
+`sudo apt update`
+`sudo apt-get install curl`
+`curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -`
+`cat /etc/apt/sources.list.d/nodesource.list`
+`sudo apt -y install nodejs`
+`sudo npm install -g npm@latest`
 
 1. You should have **Node.js 14 or later** & **npm 7 or later** installed. 
 2. Clone this repo using `git clone https://github.com/1x6/ass.git && cd ass/`
