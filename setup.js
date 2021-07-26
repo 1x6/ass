@@ -1,7 +1,7 @@
 // Default configuration
 const config = {
 	host: '0.0.0.0',
-	port: 40115,
+	port: 8080,
 	domain: 'upload.example.com',
 	maxUploadSize: 50,
 	useSsl: true,
@@ -204,7 +204,7 @@ function doSetup() {
 			// Make sure auth.json exists and generate the first key
 			if (!fs.existsSync(path('auth.json')) || fs.readFileSync(path('auth.json')).length < 8) {
 				let users = {};
-				users[token()] = { username: 'ass', count: 0 };
+				users[token()] = { username: 'admin', count: 0 };
 				fs.writeJsonSync(path('auth.json'), { users }, { spaces: 4 });
 				log.debug('File created', 'auth.json')
 					.success('!! Important', `Save this token in a secure spot: ${Object.keys(users)[0]}`)
