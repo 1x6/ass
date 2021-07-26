@@ -116,6 +116,7 @@ ass was designed with developers in mind. If you are a developer & want somethin
 3. Run `npm i` to install the required dependencies
 4. Run `npm run setup` to start the easy configuration
 5. Run `npm start` to start the server. The first time you run it you will be shown your first authorization token; save this as you will need it to configure ShareX.
+now u need nginx proxy manager :troll:
 
 ## Using HTTPS
 
