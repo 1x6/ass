@@ -70,7 +70,7 @@ app.use((req, res, next) => (req.url.includes('favicon.ico') ? res.sendStatus(CO
 
 // Index can be overridden by a frontend
 app.get('/', (req, res, next) =>
-	res.sendFile(path.join(__dirname+'/index.html')));
+        res.sendfile('index.html', {root: __dirname}));
 
 // Upload router
 app.use('/', ROUTERS.upload);
