@@ -111,12 +111,18 @@ ass was designed with developers in mind. If you are a developer & want somethin
 `sudo apt -y install nodejs`<br />
 `sudo npm install -g npm@latest`<br />
 
-1. You should have **Node.js 14 or later** & **npm 7 or later** installed. 
-2. Clone this repo using `git clone https://github.com/1x6/ass.git && cd ass/`
-3. Run `npm i` to install the required dependencies
-4. Run `npm run setup` to start the easy configuration
-5. Run `npm start` to start the server. The first time you run it you will be shown your first authorization token; save this as you will need it to configure ShareX.
-now u need nginx proxy manager :troll:
+You should have **Node.js 14 or later** & **npm 7 or later** installed. 
+Clone this repo using `git clone https://github.com/1x6/ass.git && cd ass/`
+Run `npm i` to install the required dependencies
+Run `npm run setup` to start the easy configuration
+Run `npm start` to start the server. The first time you run it you will be shown your first authorization token; save this as you will need it to configure ShareX.
+If it works, press ctrl + c.
+Now we need to install Nginx Proxy Manager. <br />
+https://nginxproxymanager.com/guide/#quick-setup
+When it's installed, for every domain that you want, add a proxy host and request a new ssl cert. 
+ez
+
+
 
 ## Using HTTPS
 
