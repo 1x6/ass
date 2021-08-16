@@ -38,8 +38,8 @@ router.use('/', (err, _req, res, next) => err.code && err.code === 'LIMIT_FILE_S
 // Process uploaded file
 router.post('/', (req, res, next) => {
 	// Load overrides
-	const trueDomain = getTrueDomain(req.headers['x-ass-domain']);
-	const generator = req.headers['x-ass-access'] || resourceIdType;
+	const trueDomain = getTrueDomain(req.headers['domain']);
+	const generator = req.headers['access'] || resourceIdType;
 
 	// Save domain with file
 	req.file.domain = `${getTrueHttp()}${trueDomain}`;
@@ -52,17 +52,17 @@ router.post('/', (req, res, next) => {
 
 	// Attach any embed overrides, if necessary
 	req.file.opengraph = {
-		title: req.headers['x-ass-og-title'],
-		description: req.headers['x-ass-og-description'],
-		author: req.headers['x-ass-og-author'],
-		authorUrl: req.headers['x-ass-og-author-url'],
-		provider: req.headers['x-ass-og-provider'],
-		providerUrl: req.headers['x-ass-og-provider-url'],
-		color: req.headers['x-ass-og-color']
+		title: req.headers['og-title'],
+		description: req.headers['og-description'],
+		author: req.headers['og-author'],
+		authorUrl: req.headers['og-author-url'],
+		provider: req.headers['og-provider'],
+		providerUrl: req.headers['og-provider-url'],
+		color: req.headers['og-color']
 	};
 
 	// Save the file information
-	const resourceId = generateId(generator, resourceIdSize, req.headers['x-ass-gfycat'] || gfyIdSize, req.file.originalname);
+	const resourceId = generateId(generator, resourceIdSize, req.headers['gfycat'] || gfyIdSize, req.file.originalname);
 	log.debug('Saving data', data.name);
 	data.put(resourceId.split('.')[0], req.file).then(() => {
 		// Log the upload
@@ -80,11 +80,11 @@ router.post('/', (req, res, next) => {
 				log.debug('Upload response sent');
 
 				// After we have sent the user the response, also send a Webhook to Discord (if headers are present)
-				if (req.headers['x-ass-webhook-client'] && req.headers['x-ass-webhook-token']) {
-					const client = req.headers['x-ass-webhook-client']
+				if (req.headers['webhook-client'] && req.headers['webhook-token']) {
+					const client = req.headers['webhook-client']
 
 					// Build the webhook client & embed
-					const whc = new WebhookClient(client, req.headers['x-ass-webhook-token']);
+					const whc = new WebhookClient(client, req.headers['webhook-token']);
 					const embed = new MessageEmbed()
 						.setTitle(logInfo)
 						.setURL(resourceUrl)
@@ -96,8 +96,8 @@ router.post('/', (req, res, next) => {
 					// Send the embed to the webhook, then delete the client after to free resources
 					log.debug('Sending webhook to client', client);
 					whc.send(null, {
-						username: req.headers['x-ass-webhook-username'] || 'ass',
-						avatarURL: req.headers['x-ass-webhook-avatar'] || ASS_LOGO,
+						username: req.headers['webhook-username'] || 'ass',
+						avatarURL: req.headers['webhook-avatar'] || ASS_LOGO,
 						embeds: [embed]
 					}).then(() => log.debug('Webhook sent').callback(() => whc.destroy()));
 				}
