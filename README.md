@@ -237,9 +237,9 @@ If you need to override a specific part of the config to be different from the g
 
 | Header | Purpose |
 | ------ | ------- |
-| **`X-Ass-Domain`** | Override the domain returned for the clipboard (useful for multi-domain hosts) |
-| **`X-Ass-Access`** | Override the generator used for the resource URI. Must be one of: `original`, `zws`, `gfycat`, or `random` ([see above](#access-types)) |
-| **`X-Ass-Gfycat`** | Override the length of Gfycat ID's. Defaults to `2` |
+| **`Domain`** | Override the domain returned for the clipboard (useful for multi-domain hosts) |
+| **`Access`** | Override the generator used for the resource URI. Must be one of: `original`, `zws`, `gfycat`, or `random` ([see above](#access-types)) |
+| **`Gfycat`** | Override the length of Gfycat ID's. Defaults to `2` |
 
 ### Fancy embeds
 
@@ -247,13 +247,13 @@ If you primarily share media on Discord, you can add these additional (optional)
 
 | Header | Purpose |
 | ------ | ------- |
-| **`X-Ass-OG-Title`** | Large text shown above your media |
-| **`X-Ass-OG-Description`** | Small text shown below the title but above the media (does not show up on videos yet) |
-| **`X-Ass-OG-Author`** | Small text shown above the title |
-| **`X-Ass-OG-Author-Url`** | URL to open when the Author is clicked |
-| **`X-Ass-OG-Provider`** | Smaller text shown above the author |
-| **`X-Ass-OG-Provider-Url`** | URL to open when the Provider is clicked |
-| **`X-Ass-OG-Color`** | Colour shown on the left side of the embed. Must be one of `&random`, `&vibrant`, or a hex colour value (for example: `#fe3c29`). Random is a randomly generated hex value & Vibrant is sourced from the image itself |
+| **`OG-Title`** | Large text shown above your media |
+| **`OG-Description`** | Small text shown below the title but above the media (does not show up on videos yet) |
+| **`OG-Author`** | Small text shown above the title |
+| **`OG-Author-Url`** | URL to open when the Author is clicked |
+| **`OG-Provider`** | Smaller text shown above the author |
+| **`OG-Provider-Url`** | URL to open when the Provider is clicked |
+| **`OG-Color`** | Colour shown on the left side of the embed. Must be one of `&random`, `&vibrant`, or a hex colour value (for example: `#fe3c29`). Random is a randomly generated hex value & Vibrant is sourced from the image itself |
 
 #### Embed placeholders
 
@@ -279,10 +279,10 @@ Once you have these, add the following HTTP headers to your ShareX config:
 
 | Header | Purpose |
 | ------ | ------- |
-| **`X-Ass-Webhook-Client`** | The **Webhook ID** |
-| **`X-Ass-Webhook-Token`** | The **Webhook Token** |
-| **`X-Ass-Webhook-Username`** | (Optional) the "username" of the Webhook; can be set to whatever you want |
-| **`X-Ass-Webhook-Avatar`** | (Optional) URL to an image to use as the Webhook avatar. Use the **full** URL including `https://` |
+| **`Webhook-Client`** | The **Webhook ID** |
+| **`Webhook-Token`** | The **Webhook Token** |
+| **`Webhook-Username`** | (Optional) the "username" of the Webhook; can be set to whatever you want |
+| **`Webhook-Avatar`** | (Optional) URL to an image to use as the Webhook avatar. Use the **full** URL including `https://` |
 
 Webhooks will show the filename, mimetype, size, upload timestamp, thumbail, & a link to delete the file. To disable webhooks, simply remove the headers from your config.
 
