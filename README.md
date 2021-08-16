@@ -118,7 +118,7 @@ Run `npm run setup` to start the easy configuration
 Run `npm start` to start the server. The first time you run it you will be shown your first authorization token; save this as you will need it to configure ShareX.
 If it works, press ctrl + c.
 Now we need to install Nginx Proxy Manager. <br />
-https://nginxproxymanager.com/guide/#quick-setup
+https://nginxproxymanager.com/guide/#quick-setup <br />
 When it's installed, for every domain that you want, add a proxy host and request a new ssl cert. 
 ez
 
