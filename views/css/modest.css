@@ -170,7 +170,7 @@
   svg,
   select,
   textarea {
-	max-width: 100%;
+	 /* max-width: 100%; removed cos it makes things smol */
   }
   
   @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
