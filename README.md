@@ -130,6 +130,8 @@ ez
 5. `npm i`
 6. `pm2 start ass`
 
+or you can git pull or something
+
 
 ## Using HTTPS
 
