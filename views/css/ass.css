@@ -48,7 +48,7 @@ a:active { color: var(--color-link-active) !important; }
 }
 
 .dl-btn:hover {
-    background-color: #59ca56;
-    color: #39393d;
+    background-color: #FFFFFF;
+    color: #1A1A1A;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
