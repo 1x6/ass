@@ -46,7 +46,7 @@ a:active { color: var(--color-link-active) !important; }
 }
 
 .button:hover {
-    color: white;
+    color: white !important;
     background-color: #044bb4;
 }
 
