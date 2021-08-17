@@ -2,9 +2,10 @@ html
 	head
 		title!=title
 		include head
+		link(href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap' rel='stylesheet')
 		style: include css/font.css
 		style.
-			body, h1, h2, h3, h4, h5, h6 { font-size: larger; }
+			body, h1, h2, h3, h4, h5, h6 { font-size: larger; font-family: 'Inter', sans-serif; }
 		style: include css/view.css
 		if color !== null
 			style: include css/img.css
