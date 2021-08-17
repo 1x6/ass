@@ -35,7 +35,7 @@ a:active { color: var(--color-link-active) !important; }
 
 .dl-btn {
     border-radius: 12px;
-    background-color: --color-primary;
+    background-color: var(--color-primary) !important;
     color: white;
     transition-duration: 0.4s;
     text-align: center;
@@ -48,7 +48,7 @@ a:active { color: var(--color-link-active) !important; }
 }
 
 .dl-btn:hover {
-    background-color: --color-primary-dim;
+    background-color: var(--color-primary-dim) !important;
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
