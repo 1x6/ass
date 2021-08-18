@@ -106,6 +106,7 @@ ass was designed with developers in mind. If you are a developer & want somethin
 ## Installation
 `sudo apt update`<br />
 `sudo apt-get install curl`<br />
+`sudo apt-get install git`<br />
 `curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -`<br />
 `cat /etc/apt/sources.list.d/nodesource.list`<br />
 `sudo apt -y install nodejs`<br />
