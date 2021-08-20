@@ -124,7 +124,7 @@ When it's installed, for every domain that you want, add a proxy host and reques
 ez
 
 ## Updating
-1. move your uploads folder, auth.json, config.json to another directory.
+1. move your uploads folder, auth.json, config.json, data.json to another directory.
 2. `sudo rm -r ass`
 3. `git clone https://github.com/1x6/ass.git`
 4. Move the config, uploads, auth.json back to the ass folder
