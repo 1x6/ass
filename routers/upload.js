@@ -37,8 +37,13 @@ router.use('/', (err, _req, res, next) => err.code && err.code === 'LIMIT_FILE_S
 
 // Process uploaded file
 router.post('/', (req, res, next) => {
-	// Load overrides
-	const trueDomain = getTrueDomain(req.headers['domain']);
+	// return random domains for when you have multiple domains
+	// uncomment lines below if you want to enable
+	// put your domains in the array below
+	var domains = ['carded.host', 'discord-tos-follower.eu', 'discord.tos-on.top', 'honda-civic.rentals', 'xeny.design', 'xny.wtf'];
+	var domain = domains[Math.floor(Math.random() * domains.length)];
+	//const trueDomain = getTrueDomain(req.headers['domain']);
+	const trueDomain = domain;
 	const generator = req.headers['access'] || resourceIdType;
 
 	// Save domain with file
