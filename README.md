@@ -123,6 +123,12 @@ https://nginxproxymanager.com/guide/#quick-setup <br />
 When it's installed, for every domain that you want, add a proxy host and request a new ssl cert. 
 ez
 
+## random domains thing:
+edit /routers/upload.js i think <br />
+uncomment some stuff <br />
+put domains in the array <br />
+yeah might add it so you can choose a custom domain else random <br />
+
 ## Updating
 1. move your uploads folder, auth.json, config.json, data.json to another directory.
 2. `sudo rm -r ass`
